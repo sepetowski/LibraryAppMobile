@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LibraryApp</string>
+    <string name="app_title">OnlineLibrary</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email_placeholder">Email</string>
+    <string name="password_placeholder">Password</string>
+    <string name="register_btn">Register</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="have_account_login">Have account? Login.</string>
+    <string name="nickname">Nickname</string>
+    <string name="optional_name">Optional: Name</string>
+    <string name="optional_surname">Optional: Surname</string>
+    <string name="btn_loading">Loading..</string>
+
+</resources>
