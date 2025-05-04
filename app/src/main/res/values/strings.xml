@@ -12,5 +12,8 @@
     <string name="optional_name">Optional: Name</string>
     <string name="optional_surname">Optional: Surname</string>
     <string name="btn_loading">Loading..</string>
+    <string name="not_account">Don\'t have account? Login</string>
+    <string name="login_btn">Login</string>
+    <string name="logout_btn">Logout</string>
 
 </resources>
