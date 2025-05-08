@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">LibraryApp</string>
-    <string name="app_title">OnlineLibrary</string>
+    <string name="app_name">OnlineLibrary</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="email_placeholder">Email</string>
@@ -15,5 +14,7 @@
     <string name="not_account">Don\'t have account? Login</string>
     <string name="login_btn">Login</string>
     <string name="logout_btn">Logout</string>
-
+    <string name="navigation_drawer_open">Open navigation</string>
+    <string name="navigation_drawer_close">Close navigation</string>
+    <string name="books_page_title">Books</string>
 </resources>
