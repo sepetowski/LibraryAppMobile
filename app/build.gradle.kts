@@ -47,6 +47,7 @@ dependencies {
     implementation(libs.material.v1110)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(libs.github.glide)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

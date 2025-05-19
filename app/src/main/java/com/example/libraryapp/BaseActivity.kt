@@ -16,6 +16,7 @@ import kotlinx.coroutines.launch
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import com.example.enums.UserRole
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -37,7 +38,6 @@ abstract class BaseActivity : AppCompatActivity() {
         drawerLayout = fullLayout
 
         initToolbar(fullLayout)
-        setupNavigation(fullLayout)
         getUserData()
     }
 
@@ -54,6 +54,8 @@ abstract class BaseActivity : AppCompatActivity() {
 
                 nicknameText.text = currentUser.nickname
                 email.text = currentUser.email
+
+                setupNavigation(drawerLayout)
             }
         }
     }
@@ -74,15 +76,23 @@ abstract class BaseActivity : AppCompatActivity() {
     private fun setupNavigation(fullLayout: DrawerLayout) {
         val navigationView = fullLayout.findViewById<NavigationView>(R.id.navigationView)
         val menu = navigationView.menu
+
+
+        if (user?.role ==UserRole.ADMIN) {
+            menu.add(0, R.id.nav_add_book, 0, R.string.add_book)
+        }
+
         val logoutItem = menu.findItem(R.id.nav_logout)
         val spanString = SpannableString(logoutItem.title)
         spanString.setSpan(ForegroundColorSpan(Color.RED), 0, spanString.length, 0)
+        logoutItem.title = spanString
+
         navigationView.setBackgroundColor(Color.WHITE)
 
-        logoutItem.title = spanString
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_books -> navigateTo(BooksActivity::class.java)
+                R.id.nav_add_book -> navigateTo(AddBookActivity::class.java)
                 R.id.nav_logout -> handleLogout()
             }
             drawerLayout.closeDrawers()

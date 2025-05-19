@@ -31,6 +31,23 @@ class InputValidator {
         }
     }
 
+    fun validateRequired(input: EditText, name: String): ValidationResult {
+        return if (input.toTrimString().isNotBlank()) {
+            ValidationResult.Success
+        } else {
+            ValidationResult.Error("Please enter $name.")
+        }
+    }
+
+    fun validateUrl(input: EditText): ValidationResult {
+        val text = input.toTrimString()
+        return if (android.util.Patterns.WEB_URL.matcher(text).matches()) {
+            ValidationResult.Success
+        } else {
+            ValidationResult.Error("Please enter a valid image URL.")
+        }
+    }
+
     suspend fun validateNicknameExists(nickname: EditText): ValidationResult {
         val firestore = FirebaseFirestore.getInstance()
 

@@ -17,4 +17,12 @@
     <string name="navigation_drawer_open">Open navigation</string>
     <string name="navigation_drawer_close">Close navigation</string>
     <string name="books_page_title">Books</string>
+    <string name="add_book">Add Book</string>
+    <string name="image_url">Image URL</string>
+    <string name="description">Description</string>
+    <string name="author">Author</string>
+    <string name="title">Title</string>
+    <string name="number_of_copies">Number of Copies</string>
+    <string name="edit_book">Edit Book</string>
+    <string name="book_cover_image">Book cover image</string>
 </resources>
