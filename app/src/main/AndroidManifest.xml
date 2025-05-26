@@ -25,6 +25,7 @@
         <activity android:name=".BooksActivity" />
         <activity android:name=".AddBookActivity" />
         <activity android:name=".EditBookActivity" />
+        <activity android:name=".LoanBookActivity" />
     </application>
 
 </manifest>

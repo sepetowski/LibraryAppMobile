@@ -25,4 +25,9 @@
     <string name="number_of_copies">Number of Copies</string>
     <string name="edit_book">Edit Book</string>
     <string name="book_cover_image">Book cover image</string>
+    <string name="logout">Logout</string>
+    <string name="loan_book">Loan Book</string>
+    <string name="filter_users_by_nickname">Filter users by nickname</string>
+    <string name="filter_books_by_title">Filter books by title</string>
+    <string name="search">Search</string>
 </resources>

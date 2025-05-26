@@ -111,4 +111,12 @@ class UserService(private val context: Context) {
                 Toast.makeText(context, "There was an error while saving your data.", Toast.LENGTH_LONG).show()
             }
     }
+
+    suspend fun getAllUsers(): List<User> {
+        return FirebaseFirestore.getInstance()
+            .collection("users")
+            .whereEqualTo("role","USER")
+            .get().await()
+            .toObjects(User::class.java)
+    }
 }

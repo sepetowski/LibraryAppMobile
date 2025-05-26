@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="nav_add_book" type="id" />
+    <item name="nav_loan_book" type="id" />
+    <item name="nav_logout_btn" type="id" />
 </resources>

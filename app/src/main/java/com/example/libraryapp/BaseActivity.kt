@@ -77,12 +77,13 @@ abstract class BaseActivity : AppCompatActivity() {
         val navigationView = fullLayout.findViewById<NavigationView>(R.id.navigationView)
         val menu = navigationView.menu
 
-
-        if (user?.role ==UserRole.ADMIN) {
+        if (user?.role == UserRole.ADMIN) {
             menu.add(0, R.id.nav_add_book, 0, R.string.add_book)
+            menu.add(0, R.id.nav_loan_book, 1, R.string.loan_book)
         }
 
-        val logoutItem = menu.findItem(R.id.nav_logout)
+        val logoutItem = menu.add(0, R.id.nav_logout_btn, menu.size(), R.string.logout)
+
         val spanString = SpannableString(logoutItem.title)
         spanString.setSpan(ForegroundColorSpan(Color.RED), 0, spanString.length, 0)
         logoutItem.title = spanString
@@ -93,7 +94,8 @@ abstract class BaseActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.nav_books -> navigateTo(BooksActivity::class.java)
                 R.id.nav_add_book -> navigateTo(AddBookActivity::class.java)
-                R.id.nav_logout -> handleLogout()
+                R.id.nav_loan_book -> navigateTo(LoanBookActivity::class.java)
+                R.id.nav_logout_btn -> handleLogout()
             }
             drawerLayout.closeDrawers()
             true

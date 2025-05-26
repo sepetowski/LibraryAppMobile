@@ -13,7 +13,7 @@ import com.example.libraryapp.R
 import com.example.models.Book
 
 class BookAdapter(
-    private val books: List<Book>,
+    private var books: List<Book>,
     private val isAdmin: Boolean,
     private val onEditClicked: (Book) -> Unit
 ) : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
@@ -65,4 +65,9 @@ class BookAdapter(
     }
 
     override fun getItemCount(): Int = books.size
+
+    fun updateData(newBooks: List<Book>) {
+        books = newBooks
+        notifyDataSetChanged()
+    }
 }
