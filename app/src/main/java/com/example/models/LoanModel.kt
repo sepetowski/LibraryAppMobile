@@ -6,12 +6,5 @@ data class Loan(
     val bookId: String = "",
     val timestamp: Long = System.currentTimeMillis(),
     var returnedAt: Long? = null
-)
 
-enum class LoanResult {
-    SUCCESS,
-    ALREADY_LOANED,
-    NO_COPIES,
-    ERROR,
-    NOT_ADMIN
-}
+)

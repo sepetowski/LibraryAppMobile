@@ -1,3 +1,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/nav_books"  android:title="@string/books_page_title"  />
+    <item android:id="@+id/nav_active_loans"  android:title="@string/active_loans"  />
+    <item android:id="@+id/nav_history_loans"  android:title="@string/history_loans"  />
 </menu>

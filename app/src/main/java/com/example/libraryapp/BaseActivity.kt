@@ -95,6 +95,8 @@ abstract class BaseActivity : AppCompatActivity() {
                 R.id.nav_books -> navigateTo(BooksActivity::class.java)
                 R.id.nav_add_book -> navigateTo(AddBookActivity::class.java)
                 R.id.nav_loan_book -> navigateTo(LoanBookActivity::class.java)
+                R.id.nav_active_loans -> navigateTo(ActiveLoansActivity::class.java)
+                R.id.nav_history_loans -> navigateTo(LoanHistoryActivity::class.java)
                 R.id.nav_logout_btn -> handleLogout()
             }
             drawerLayout.closeDrawers()

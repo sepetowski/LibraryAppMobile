@@ -7,7 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.books.BooksService
 import com.example.enums.UserRole
 import com.example.models.Book
-import com.example.models.LoanResult
+import com.example.models.Response
 import com.example.models.User
 import com.example.user.UserService
 import com.google.android.material.textfield.TextInputEditText
@@ -140,11 +140,11 @@ class LoanBookActivity : BaseActivity() {
     private fun loanBookToUser(user: User, book: Book) {
         lifecycleScope.launch {
             when (val result = booksService.loanBookToUser(user.id, book.id)) {
-                LoanResult.SUCCESS -> Toast.makeText(this@LoanBookActivity, "Loan successful", Toast.LENGTH_SHORT).show()
-                LoanResult.ALREADY_LOANED -> Toast.makeText(this@LoanBookActivity, "User already loaned this book", Toast.LENGTH_SHORT).show()
-                LoanResult.NO_COPIES -> Toast.makeText(this@LoanBookActivity, "Book is not available", Toast.LENGTH_SHORT).show()
-                LoanResult.NOT_ADMIN -> Toast.makeText(this@LoanBookActivity, "Admin access required", Toast.LENGTH_SHORT).show()
-                LoanResult.ERROR -> Toast.makeText(this@LoanBookActivity, "Loan failed", Toast.LENGTH_SHORT).show()
+                Response.SUCCESS -> Toast.makeText(this@LoanBookActivity, "Loan successful", Toast.LENGTH_SHORT).show()
+                Response.ALREADY_LOANED -> Toast.makeText(this@LoanBookActivity, "User already loaned this book", Toast.LENGTH_SHORT).show()
+                Response.NO_COPIES -> Toast.makeText(this@LoanBookActivity, "Book is not available", Toast.LENGTH_SHORT).show()
+                Response.NOT_ADMIN -> Toast.makeText(this@LoanBookActivity, "Admin access required", Toast.LENGTH_SHORT).show()
+                Response.ERROR -> Toast.makeText(this@LoanBookActivity, "Loan failed", Toast.LENGTH_SHORT).show()
             }
         }
     }

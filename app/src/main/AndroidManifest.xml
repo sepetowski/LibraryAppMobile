@@ -26,6 +26,8 @@
         <activity android:name=".AddBookActivity" />
         <activity android:name=".EditBookActivity" />
         <activity android:name=".LoanBookActivity" />
+        <activity android:name=".ActiveLoansActivity" />
+        <activity android:name=".LoanHistoryActivity"/>
     </application>
 
 </manifest>

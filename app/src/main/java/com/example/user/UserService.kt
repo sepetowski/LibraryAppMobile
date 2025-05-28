@@ -119,4 +119,22 @@ class UserService(private val context: Context) {
             .get().await()
             .toObjects(User::class.java)
     }
+
+    suspend fun getUserById(userId: String): User? {
+        return try {
+            val document = firestore.collection("users")
+                .document(userId)
+                .get()
+                .await()
+
+            if (document.exists()) {
+                document.toObject(User::class.java)
+            } else {
+                null
+            }
+        } catch (e: Exception) {
+            Log.e("UserService", "Error fetching user by ID", e)
+            null
+        }
+    }
 }

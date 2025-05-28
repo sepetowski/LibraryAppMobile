@@ -30,4 +30,8 @@
     <string name="filter_users_by_nickname">Filter users by nickname</string>
     <string name="filter_books_by_title">Filter books by title</string>
     <string name="search">Search</string>
+    <string name="active_loans">Active Loans</string>
+    <string name="history_loans">Returned Loans</string>
+    <string name="no_active_loans">No active loans</string>
+    <string name="none_returned">None of the loaned books have been returned.</string>
 </resources>
