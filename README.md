@@ -97,26 +97,26 @@ Included in this repository are screenshots demonstrating:
 
 ### Common views
 
-![home](https://github.com/user-attachments/assets/5f61d73a-5f3a-48f3-8592-8c4059a04a45)
-![register](https://github.com/user-attachments/assets/7e00a1e7-1838-47c2-8928-b3dec2ed8bad)
-![login](https://github.com/user-attachments/assets/b30e3a68-bffe-4d7e-84c2-6953a2930e1d)
+<img src="https://github.com/user-attachments/assets/5f61d73a-5f3a-48f3-8592-8c4059a04a45" width="300"/>
+<img src="https://github.com/user-attachments/assets/7e00a1e7-1838-47c2-8928-b3dec2ed8bad" width="300"/>
+<img src="https://github.com/user-attachments/assets/b30e3a68-bffe-4d7e-84c2-6953a2930e1d" width="300"/>
 
 ### Admin views
 
-![books_admin](https://github.com/user-attachments/assets/3976b1d1-15b3-4fdc-a3c8-d5a8f23d1142)
-![admin_add_book](https://github.com/user-attachments/assets/bdf7fabb-e155-4c2e-be9b-b461025c2bf2)
-![update_book](https://github.com/user-attachments/assets/88eb422f-884d-41c1-82e0-1c26cb25cd22)
-![active_laons](https://github.com/user-attachments/assets/f668923a-5f20-44c5-b242-ca119641d3aa)
-![admin_nav](https://github.com/user-attachments/assets/1752867f-e25e-47e8-b6db-f357076afed7)
-![make_loan](https://github.com/user-attachments/assets/67cdb32c-3450-4b12-b351-e6507d788364)
-![admin_returned_books](https://github.com/user-attachments/assets/fdbc776a-113f-446e-a4c8-0ca5b9ba0d35)
-
+<img src="https://github.com/user-attachments/assets/3976b1d1-15b3-4fdc-a3c8-d5a8f23d1142" width="300"/>
+<img src="https://github.com/user-attachments/assets/bdf7fabb-e155-4c2e-be9b-b461025c2bf2" width="300"/>
+<img src="https://github.com/user-attachments/assets/88eb422f-884d-41c1-82e0-1c26cb25cd22" width="300"/>
+<img src="https://github.com/user-attachments/assets/f668923a-5f20-44c5-b242-ca119641d3aa" width="300"/>
+<img src="https://github.com/user-attachments/assets/1752867f-e25e-47e8-b6db-f357076afed7" width="300"/>
+<img src="https://github.com/user-attachments/assets/67cdb32c-3450-4b12-b351-e6507d788364" width="300"/>
+<img src="https://github.com/user-attachments/assets/fdbc776a-113f-446e-a4c8-0ca5b9ba0d35" width="300"/>
 
 ### User views
-![user_books_all](https://github.com/user-attachments/assets/c218160c-e36b-46d2-8a48-07fe9ae99a01)
-![user_nav](https://github.com/user-attachments/assets/eb72b8bb-a077-4d47-bf7a-a9497c5429b4)
-![active_loans_user](https://github.com/user-attachments/assets/6ba95609-0b48-47e4-b68d-0a5454ae2901)
-![user_retunred_books](https://github.com/user-attachments/assets/28f00f11-54ea-4c0f-bf0a-55a7e513057c)
+
+<img src="https://github.com/user-attachments/assets/c218160c-e36b-46d2-8a48-07fe9ae99a01" width="300"/>
+<img src="https://github.com/user-attachments/assets/eb72b8bb-a077-4d47-bf7a-a9497c5429b4" width="300"/>
+<img src="https://github.com/user-attachments/assets/6ba95609-0b48-47e4-b68d-0a5454ae2901" width="300"/>
+<img src="https://github.com/user-attachments/assets/28f00f11-54ea-4c0f-bf0a-55a7e513057c" width="300"/>
 
 ---
 
