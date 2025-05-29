@@ -41,6 +41,9 @@ abstract class BaseActivity : AppCompatActivity() {
         getUserData()
     }
 
+    protected open fun onUserReady() {
+    }
+
     private fun getUserData(){
         lifecycleScope.launch {
             user = userService.getCurrentUserData()
@@ -56,6 +59,7 @@ abstract class BaseActivity : AppCompatActivity() {
                 email.text = currentUser.email
 
                 setupNavigation(drawerLayout)
+                onUserReady()
             }
         }
     }
@@ -97,6 +101,7 @@ abstract class BaseActivity : AppCompatActivity() {
                 R.id.nav_loan_book -> navigateTo(LoanBookActivity::class.java)
                 R.id.nav_active_loans -> navigateTo(ActiveLoansActivity::class.java)
                 R.id.nav_history_loans -> navigateTo(LoanHistoryActivity::class.java)
+                R.id.nav_account -> navigateTo(UserProfileActivity::class.java)
                 R.id.nav_logout_btn -> handleLogout()
             }
             drawerLayout.closeDrawers()

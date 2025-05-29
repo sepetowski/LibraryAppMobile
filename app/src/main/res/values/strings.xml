@@ -34,4 +34,6 @@
     <string name="history_loans">Returned Loans</string>
     <string name="no_active_loans">No active loans</string>
     <string name="none_returned">None of the loaned books have been returned.</string>
+    <string name="save">Save</string>
+    <string name="account">Account</string>
 </resources>

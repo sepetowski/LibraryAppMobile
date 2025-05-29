@@ -2,4 +2,5 @@
     <item android:id="@+id/nav_books"  android:title="@string/books_page_title"  />
     <item android:id="@+id/nav_active_loans"  android:title="@string/active_loans"  />
     <item android:id="@+id/nav_history_loans"  android:title="@string/history_loans"  />
+    <item android:id="@+id/nav_account"  android:title="@string/account"  />
 </menu>

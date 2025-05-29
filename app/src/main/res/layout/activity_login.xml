@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/login_btn"
-            app:backgroundTint="@color/material_dynamic_primary20"
+            app:backgroundTint="@color/save_button_background"
             android:textColor="@android:color/white" />
 
         <TextView

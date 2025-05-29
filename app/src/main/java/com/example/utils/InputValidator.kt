@@ -15,13 +15,6 @@ class InputValidator {
         }
     }
 
-    fun validateNotEmpty(input: EditText): ValidationResult {
-        return if (input.toTrimString().isNotBlank()) {
-            ValidationResult.Success
-        } else {
-            ValidationResult.Error("This filed cannot be empty.")
-        }
-    }
 
     fun validateEmail(input: EditText): ValidationResult {
         return if (android.util.Patterns.EMAIL_ADDRESS.matcher(input.toTrimString()).matches()) {
@@ -48,22 +41,28 @@ class InputValidator {
         }
     }
 
-    suspend fun validateNicknameExists(nickname: EditText): ValidationResult {
-        val firestore = FirebaseFirestore.getInstance()
+    suspend fun validateNicknameExists(
+        editText: EditText,
+        excludeUserId: String? = null
+    ): ValidationResult {
+        val nickname = editText.text.toString().trim()
+        if (nickname.isEmpty()) return ValidationResult.Error("Nickname cannot be empty")
 
-        return try {
-            val querySnapshot = firestore.collection("users")
-                .whereEqualTo("nickname", nickname.toTrimString())
-                .get()
-                .await()
+        val snapshot = firestore
+            .collection("users")
+            .whereEqualTo("nickname", nickname)
+            .get()
+            .await()
 
-            if (!querySnapshot.isEmpty) {
-                ValidationResult.Error("This nickname is already taken.")
-            } else {
-                ValidationResult.Success
-            }
-        } catch (e: Exception) {
-            ValidationResult.Error("There was an error while validating nickname. Try again.")
+        val exists = snapshot.documents.any {
+            val uid = it.getString("id")
+            excludeUserId == null || uid != excludeUserId
+        }
+
+        return if (exists) {
+            ValidationResult.Error("This nickname is already taken")
+        } else {
+            ValidationResult.Success
         }
     }
 

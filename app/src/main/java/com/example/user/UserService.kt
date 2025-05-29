@@ -137,4 +137,11 @@ class UserService(private val context: Context) {
             null
         }
     }
+
+    suspend fun updateUserProfile(updatedUser: User) {
+        firestore.collection("users")
+            .document(updatedUser.id)
+            .set(updatedUser)
+            .await()
+    }
 }

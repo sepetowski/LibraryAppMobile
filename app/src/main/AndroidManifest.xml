@@ -28,6 +28,7 @@
         <activity android:name=".LoanBookActivity" />
         <activity android:name=".ActiveLoansActivity" />
         <activity android:name=".LoanHistoryActivity"/>
+        <activity android:name=".UserProfileActivity"/>
     </application>
 
 </manifest>
