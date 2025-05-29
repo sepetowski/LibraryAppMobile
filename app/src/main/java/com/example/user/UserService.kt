@@ -60,10 +60,8 @@ class UserService(private val context: Context) {
         }
     }
 
-
     fun isUserLogged(): Boolean{
         val user = auth.currentUser
-        Log.d("UserService", "isUserLogged() - current user: $user")
         return user != null
     }
 

@@ -49,7 +49,7 @@ class ActiveLoansActivity : BaseActivity() {
                 recyclerView.visibility = View.VISIBLE
                 recyclerView.adapter = LoanAdapter(
                     loans = activeLoans,
-                    showReturnButton = true,
+                    showReturnButton = isAdmin,
                     isAdmin = isAdmin,
                     onReturnClicked = { loan -> returnBook(loan) }
                 )
